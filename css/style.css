@@ -1,0 +1,103 @@
+.section1{
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0px 25px 60px rgb(235, 230, 167);
+    border-radius: 100px;
+    border: 5px double rgb(144, 184, 207);
+    background-color: rgba(123, 188, 214, 0.808);
+    padding: 30px;
+    margin: 150px auto;
+}
+.card-grid {
+    display: grid;
+    justify-content: space-evenly;
+    gap:20px;
+    grid-template-columns: repeat(4,250px);
+    grid-template-rows: repeat(4,200px);
+    grid-template-areas: 
+    "sale1 sale1 product1 product2"
+    "sale2 sale2 product1 product2"
+    "product3 product4 sale3 sale3"
+    "product3 product4 sale4 sale4"
+}
+span{
+    font-size: 100px;
+    color: rgb(131, 150, 150);
+}
+
+.card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e8d0;
+    border-radius: 40%;
+    box-shadow: 0 20px 50px rgb(166, 168, 168);
+
+}
+.sale-1 {
+    grid-area: sale1;
+    border-radius: 10%;
+}
+.sale-2 {
+    grid-area: sale2;
+    border-radius: 10%;
+}
+.product-1 {
+    grid-area: product1;
+}   
+.product-2 {
+    grid-area: product2;
+}
+.sale-3 {
+    grid-area: sale3;
+}
+.sale-4 {
+    grid-area: sale4;
+}
+.product-3 {
+    grid-area: product3;
+    border-radius: 10%;
+}
+.product-4 {
+    grid-area: product4;
+    border-radius: 10%;
+}
+
+
+@media (max-width: 1125px) {
+    .card-grid  {
+        grid-template-columns: repeat(2, minmax(200px,250px));
+        grid-template-rows: repeat(8, 180px);
+        grid-template-areas: 
+        "sale1 sale1"
+        "sale2 sale2"
+        "product1 product2"
+        "product1 product2"
+        "sale3 sale3"
+        "sale4 sale4"
+        "product3 product4"
+        "product3 product4"
+    }
+}
+
+
+@media (max-width: 480px) {
+    .card-grid  {
+        width: 100%;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(12,140px);
+        grid-template-areas: 
+        "sale1"
+        "sale2"
+        "product1"
+        "product1"
+        "product2"
+        "product2"
+        "sale3"
+        "sale4"
+        "product3"
+        "product3"
+        "product4"
+        "product4"
+    }
+}
